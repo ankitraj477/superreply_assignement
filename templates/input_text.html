@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enter Text for New Voice</title>
+</head>
+<body>
+    <h1>Enter Text for the New Voice</h1>
+    <form action="/create_voice" method="POST">
+        <input type="hidden" name="filename" value="{{ filename }}">
+        <textarea name="text" rows="4" cols="50" maxlength="500" placeholder="Type your text here..." required></textarea><br><br>
+        <input type="submit" value="Create New Voice File">
+    </form>
+    {% if message %}
+        <p style="color:red">{{ message }}</p>
+    {% endif %}
+</body>
+</html>
